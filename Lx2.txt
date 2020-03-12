@@ -1,0 +1,57 @@
+C#企业级开发技术练习2答题卡
+
+班级：信管一班     
+姓名： 卢茵茵    
+学号： 20190307135    
+
+注：请将答案放置在序号下方。*/
+
+（一）
+using System;
+
+namespace cs02
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			string[] course = { "javascript", ".net", "ecmascript", "golang", "java" };
+			int i = 95;
+			foreach (string c in course)
+			{
+				i = i + 2;
+				Console.Write(c.PadRight(11, '&'));
+				Console.WriteLine($"{i.ToString().PadLeft(5, '*')}");
+			}
+		}
+	}
+}
+
+
+
+（二）
+using System;
+
+namespace cs03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string lgs = "程序语言:,jiavaScript,.net,ecmascript,polang,jiva,其中:";
+            string[] r = lgs.Split(',');
+            foreach(string s in r)
+            Console.WriteLine(s);
+            int i = 0, j = 0, k = 0;
+            foreach(string s in r)
+            {
+                if (s.Contains("a")) i++;
+                if (s.StartsWith("j")) j++;
+                if (s.EndsWith("t")) k++;
+            }
+            Console.WriteLine($"包含a:{i}门,j开头:{j}门，t结尾:{k}门");
+        }
+    }
+}
+
+
